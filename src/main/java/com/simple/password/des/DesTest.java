@@ -1,9 +1,9 @@
 package com.simple.password.des;
 
+import com.sun.org.apache.xerces.internal.impl.dv.util.Base64;
+
 import javax.crypto.Cipher;
-import javax.crypto.NoSuchPaddingException;
 import javax.crypto.spec.SecretKeySpec;
-import java.security.NoSuchAlgorithmException;
 
 /**
  * 项目: pw-subject
@@ -31,8 +31,10 @@ public class DesTest {
         cipher.init(Cipher.ENCRYPT_MODE,sks);
         // 进行加密
         byte[] bytes = cipher.doFinal(input.getBytes());
+        // 使用Base64进行加密
+        String encode = Base64.encode(bytes);
         // 打印密文
-        System.out.println(new String(bytes));
+        System.out.println(encode);
 
     }
 }
