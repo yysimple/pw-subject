@@ -1,4 +1,4 @@
-package com.simple.password.ase;
+package com.simple.password.aes;
 
 import com.sun.org.apache.xerces.internal.impl.dv.util.Base64;
 
@@ -13,7 +13,7 @@ import javax.crypto.spec.SecretKeySpec;
  * @author: WuChengXing
  * @create: 2022-03-10 23:30
  **/
-public class ASEFullTest {
+public class AESFullTest {
     public static void main(String[] args) throws Exception {
         String input = "hello world";
         // AES需要16位的key值
